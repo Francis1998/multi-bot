@@ -1,0 +1,13 @@
+[Unit]
+Description=multi-bot persistent ssh-agent
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%h/.multi-bot/ssh-agent.sock
+ExecStartPre=/usr/bin/env mkdir -p %h/.multi-bot
+ExecStart=/usr/bin/ssh-agent -D -a %h/.multi-bot/ssh-agent.sock
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

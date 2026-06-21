@@ -1,0 +1,19 @@
+{
+  "name": "multi-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mobile-friendly coordinator for running multiple agent sessions from one browser UI.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace server",
+    "dev:server": "npm run dev --workspace server",
+    "dev:client": "npm run dev --workspace client",
+    "build": "npm run build --workspace server && npm run build --workspace client",
+    "typecheck": "npm run typecheck --workspace server && npm run typecheck --workspace client",
+    "test": "npm run test --workspace server && npm run test:python",
+    "test:python": "PYTHONPATH=orchestrator/src .venv/bin/python -m pytest orchestrator/tests"
+  }
+}

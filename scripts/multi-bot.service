@@ -1,0 +1,17 @@
+[Unit]
+Description=multi-bot local coordinator
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/multi-bot
+ExecStart=/usr/bin/env npm run start --workspace server
+Restart=on-failure
+RestartSec=5
+Environment=HOST=127.0.0.1
+Environment=PORT=8787
+OOMScoreAdjust=200
+MemoryMax=20G
+
+[Install]
+WantedBy=default.target
