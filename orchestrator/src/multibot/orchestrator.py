@@ -8,9 +8,9 @@ import sys
 from collections.abc import Callable
 from typing import Any
 
-from linkedin.multibot.message_router import LEADER_ID, USER_ID, MessageRouter
-from linkedin.multibot.models import AgentRole, Message, TaskUnit
-from linkedin.multibot.protocol import JsonRpcEvent, JsonRpcRequest, JsonRpcResponse, normalize_start_params
+from multibot.message_router import LEADER_ID, USER_ID, MessageRouter
+from multibot.models import AgentRole, Message, TaskUnit
+from multibot.protocol import JsonRpcEvent, JsonRpcRequest, JsonRpcResponse, normalize_start_params
 
 Emitter = Callable[[JsonRpcEvent], None]
 
@@ -223,7 +223,7 @@ def main() -> int:
         Process exit code.
     """
 
-    emit_json_line({"id": None, "event": "ready", "data": {"runtime": "linkedin.multibot"}})
+    emit_json_line({"id": None, "event": "ready", "data": {"runtime": "multibot"}})
     for raw_line in sys.stdin:
         stripped_line = raw_line.strip()
         if not stripped_line:

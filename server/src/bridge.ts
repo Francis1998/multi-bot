@@ -33,7 +33,7 @@ export class PythonBridge extends EventEmitter {
     }
 
     const orchestratorSource = path.join(this.rootDir, "orchestrator", "src");
-    this.process = spawn(this.pythonCommand, ["-m", "linkedin.multibot"], {
+    this.process = spawn(this.pythonCommand, ["-m", "multibot"], {
       cwd: this.rootDir,
       stdio: ["pipe", "pipe", "pipe"],
       env: {

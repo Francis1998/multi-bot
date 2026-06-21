@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "linkedin-multibot"
+name = "multibot-orchestrator"
 version = "0.1.0"
 description = "Python JSON-Lines orchestrator for multi-bot."
 requires-python = ">=3.10"

@@ -2,7 +2,7 @@
 
 `multi-bot` is a mobile-friendly coordinator for running several long-lived coding-agent sessions from one browser UI. It recreates the core product idea from an internal multi-agent workflow: a TypeScript server owns HTTP/WebSocket access, a Python orchestrator decomposes work into Leader/SubAgent execution, and a React client gives engineers phone-friendly visibility into remote runs.
 
-This repository is a public, local-first recreation. It does not include private LinkedIn integrations, credentials, internal hostnames, or proprietary Claude Code plugins. The default provider is a deterministic simulator so the architecture can be tested without any external agent runtime installed.
+This repository is a public, local-first recreation. It does not include private employer integrations, credentials, internal hostnames, or proprietary agent plugins. The default provider is a deterministic simulator so the architecture can be tested without any external agent runtime installed.
 
 ## What It Demonstrates
 
@@ -24,7 +24,7 @@ TypeScript server (Express + ws + sqlite)
   |
   | newline-delimited JSON over stdin/stdout
   v
-Python orchestrator (linkedin.multibot)
+Python orchestrator (multibot)
   |
   +-- Leader agent
   +-- SubAgent 0
@@ -144,7 +144,7 @@ The production version of this product pattern should run under a service manage
 ```text
 client/        React mobile-friendly UI
 server/        Express API, WebSocket fanout, sqlite persistence, Python bridge
-orchestrator/  Python package implementing linkedin.multibot
+orchestrator/  Python package implementing multibot
 scripts/       Status hook and service-management examples
 ```
 

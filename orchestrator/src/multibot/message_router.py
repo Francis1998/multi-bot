@@ -6,7 +6,7 @@ import asyncio
 import logging
 from collections.abc import Sequence
 
-from linkedin.multibot.models import AgentRole, Message
+from multibot.models import AgentRole, Message
 
 LOGGER = logging.getLogger(__name__)
 

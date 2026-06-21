@@ -6,8 +6,8 @@ import asyncio
 
 import pytest
 
-from linkedin.multibot.message_router import LEADER_ID, MessageRouter
-from linkedin.multibot.models import AgentRole, Message, TaskUnit
+from multibot.message_router import LEADER_ID, MessageRouter
+from multibot.models import AgentRole, Message, TaskUnit
 
 
 def test_router_blocks_subagent_to_subagent_route() -> None:

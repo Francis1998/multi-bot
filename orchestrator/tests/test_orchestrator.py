@@ -6,8 +6,8 @@ import asyncio
 
 import pytest
 
-from linkedin.multibot.orchestrator import build_event, run_simulated_orchestration
-from linkedin.multibot.protocol import JsonRpcEvent, normalize_start_params
+from multibot.orchestrator import build_event, run_simulated_orchestration
+from multibot.protocol import JsonRpcEvent, normalize_start_params
 
 
 def test_normalize_start_params_caps_subagent_count() -> None:
